@@ -15,12 +15,11 @@ import com.clientui.proxies.MicroServiceLocationProxies;
 
 @RestController
 @Controller
-public class ClientController {
+public class LocationController {
 	
 	@Autowired
 	private MicroServiceLocationProxies mslp;
 
-	// Location
 		@PostMapping(value = "/locations")
 		public void addLocation(@RequestBody LocationBean l) {
 			mslp.saveLocation(l);
