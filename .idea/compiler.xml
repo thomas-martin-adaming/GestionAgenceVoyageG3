@@ -8,18 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="zuul-server" />
         <module name="config-server" />
+        <module name="microservice-location" />
         <module name="microservice-journey" />
         <module name="Portfolio" />
         <module name="clientui" />
         <module name="eureka-server" />
+        <module name="microservice-customer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="clientui" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="microservice-customer" target="1.8" />
       <module name="microservice-journey" target="11" />
-      <module name="microservice-utilisateur" target="1.8" />
+      <module name="microservice-location" target="1.8" />
       <module name="Portfolio" target="11" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,8 +33,9 @@
       <module name="clientui" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="microservice-customer" options="-parameters" />
       <module name="microservice-journey" options="-parameters" />
-      <module name="microservice-utilisateur" options="-parameters" />
+      <module name="microservice-location" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
     </option>
   </component>

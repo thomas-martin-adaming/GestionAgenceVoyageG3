@@ -11,4 +11,8 @@ import com.clientui.beans.VolBean;
 public interface MicroServiceVolProxies {
 	@GetMapping(value="/vols")
 	List<VolBean> findAll();
+
+
+
+
 }

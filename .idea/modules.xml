@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/clientui/clientui.iml" filepath="$PROJECT_DIR$/clientui/clientui.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-customer/microservice-customer.iml" filepath="$PROJECT_DIR$/microservice-customer/microservice-customer.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-journey/microservice-journey.iml" filepath="$PROJECT_DIR$/microservice-journey/microservice-journey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-location/microservice-location.iml" filepath="$PROJECT_DIR$/microservice-location/microservice-location.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
     </modules>
   </component>

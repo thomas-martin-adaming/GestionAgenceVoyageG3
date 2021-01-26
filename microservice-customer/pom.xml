@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mvol</groupId>
-	<artifactId>microservice-vol</artifactId>
+	<artifactId>microservice-customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservice-vol</name>
+	<name>microservice-customer</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
