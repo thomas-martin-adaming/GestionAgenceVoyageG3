@@ -23,12 +23,12 @@ public class LocationController {
 	private LocationService lServ;
 
 	@GetMapping(value = "locations")
-	public List<Location> findAll() {
+	public List<Location> findAllLocation() {
 		return lServ.findAll();
 	}
 
 	@GetMapping(value = "locations/{pId}")
-	public Location findOne(@PathVariable("pId") Long id) {
+	public Location findOneLocation(@PathVariable("pId") Long id) {
 		return lServ.findOne(id);
 	}
 
