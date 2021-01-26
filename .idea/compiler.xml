@@ -9,7 +9,6 @@
         <module name="zuul-server" />
         <module name="config-server" />
         <module name="microservice-journey" />
-        <module name="microservice-utilisateur" />
         <module name="Portfolio" />
         <module name="clientui" />
         <module name="eureka-server" />
@@ -19,7 +18,7 @@
       <module name="clientui" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
-      <module name="microservice-journey" target="1.8" />
+      <module name="microservice-journey" target="11" />
       <module name="microservice-utilisateur" target="1.8" />
       <module name="Portfolio" target="11" />
       <module name="zuul-server" target="1.8" />
