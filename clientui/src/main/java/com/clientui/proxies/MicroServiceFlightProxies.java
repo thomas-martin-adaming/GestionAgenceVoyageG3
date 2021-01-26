@@ -22,5 +22,4 @@ public interface MicroServiceFlightProxies {
 	@DeleteMapping("/flight/{idFlight}")
 	void delete();
 
-
 }
