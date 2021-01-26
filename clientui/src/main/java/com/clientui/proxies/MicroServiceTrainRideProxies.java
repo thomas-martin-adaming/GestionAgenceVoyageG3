@@ -2,9 +2,9 @@ package com.clientui.proxies;
 
 import com.clientui.beans.TrainRideBean;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @FeignClient(name = "microservice-journey", url = "localhost:9092/")
@@ -14,12 +14,12 @@ public interface MicroServiceTrainRideProxies {
 	List<TrainRideBean> findAll();
 
 	@GetMapping("/trainRide/{idTrainRide}")
-	TrainRideBean findOne();
+	TrainRideBean findOne(@PathParam("idTrainRide") Long id);
 
 	@PostMapping("/trainRide")
-	TrainRideBean save();
+	TrainRideBean save(@RequestBody TrainRideBean trainRide);
 
 	@DeleteMapping("/trainRide/{idTrainRide}")
-	void delete();
+	void delete(@PathParam("idTrainRide") Long id);
 
 }

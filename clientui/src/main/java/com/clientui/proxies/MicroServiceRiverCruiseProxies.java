@@ -7,6 +7,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import javax.websocket.server.PathParam;
 
 @FeignClient(name = "microservice-journey", url = "localhost:9092/")
 public interface MicroServiceRiverCruiseProxies {
@@ -15,13 +18,13 @@ public interface MicroServiceRiverCruiseProxies {
 	List<RiverCruiseBean> findAll();
 
 	@GetMapping("/riverCruise/{idriverCruise}")
-	RiverCruiseBean findOne();
+	RiverCruiseBean findOne(@PathParam("idriverCruise") Long id);
 
 	@PostMapping("/riverCruise")
-	RiverCruiseBean save();
+	RiverCruiseBean save(@RequestBody RiverCruiseBean riverCruise);
 
 	@DeleteMapping("/riverCruise/{idRiverCruise}")
-	void delete();
+	void delete(@PathParam("idriverCruise") Long id);
 
 
 
