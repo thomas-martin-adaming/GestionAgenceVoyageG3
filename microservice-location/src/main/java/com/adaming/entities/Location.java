@@ -22,9 +22,8 @@ public class Location implements Serializable  {
 	private String locationCode;
 	@Column(name = "NAME_LOCATION")
 	private String locationName;
-	
-	// @Column(name="TYPE_LOCATION") 
-	// private LocationType locationType;
+	@Column(name="TYPE_LOCATION") 
+	private LocationType locationType;
 	
 	private boolean deleted = false;
 	
@@ -37,7 +36,7 @@ public class Location implements Serializable  {
 		this.id = id;
 		this.locationCode = locationCode;
 		this.locationName = locationName;
-	//	this.locationType = locationType;
+		this.locationType = locationType;
 	}
 
 	public Long getId() {
@@ -58,12 +57,12 @@ public class Location implements Serializable  {
 	public void setLocationName(String locationName) {
 		this.locationName = locationName;
 	}
-//	public LocationType getLocationType() {
-//		return locationType;
-//	}
-//	public void setLocationType(LocationType locationType) {
-//		this.locationType = locationType;
-//	}
+	public LocationType getLocationType() {
+		return locationType;
+	}
+	public void setLocationType(LocationType locationType) {
+		this.locationType = locationType;
+	}
 	
 	public boolean isDeleted() {
 		return deleted;
@@ -75,6 +74,6 @@ public class Location implements Serializable  {
 	@Override
 	public String toString() {
 		return "Location [id=" + id + ", locationCode=" + locationCode + ", locationName=" + locationName
-				+ /* ", locationType=" + locationType + */ "]";
+				+  ", locationType=" + locationType + "]";
 	}
 }

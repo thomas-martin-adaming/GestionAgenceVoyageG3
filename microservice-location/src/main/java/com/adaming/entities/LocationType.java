@@ -1,20 +1,23 @@
 package com.adaming.entities;
 
-public class LocationType {
-
-	private enum type {
-
-	AIRPORT   ("Airport") ,
-	SEAPORT   ("Seaport") ,
-	TRAINSTATION  ("Train Station") ;
-	
-   private final String value;
-    private type(final String value) {
-        this.value = value;
-   }
-
+public enum LocationType {
+		
+	AIRPORT,
+	SEAPORT,
+	TRAINSTATION;
+    
     public String getType() { 
-    	return value; 
+    	switch(this) {
+    	case AIRPORT:
+    		return "Airport";
+    	case SEAPORT:
+    		return "Seaport";
+    	case TRAINSTATION:
+    		return "Train Station";
+    	default:
+    		return null;
     	}
-    }	
-}
+    	}
+    
+}	
+
