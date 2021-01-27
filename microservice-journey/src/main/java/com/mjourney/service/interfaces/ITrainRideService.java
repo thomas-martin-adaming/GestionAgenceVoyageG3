@@ -1,6 +1,5 @@
 package com.mjourney.service.interfaces;
 
-import com.mjourney.entities.Flight;
 import com.mjourney.entities.TrainRide;
 
 import java.util.List;

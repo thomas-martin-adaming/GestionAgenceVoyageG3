@@ -17,13 +17,13 @@ public class MicroserviceCustomerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MicroserviceCustomerApplication.class, args);
 	}
-	@Bean
-	CommandLineRunner start(CustomerRepository customerRepository) {
-		return (args) -> {
-			Stream.of(new Customer("TOURNESOL", "Tryphon-Tournesol@mail.com", 0735353637)).forEach((c) -> {
-						customerRepository.save(c);
-						});
-		};
-	}
+//	@Bean
+//	CommandLineRunner start(CustomerRepository customerRepository) {
+//		return (args) -> {
+//			Stream.of(new Customer("TOURNESOL", "Tryphon-Tournesol@mail.com", 0735353637)).forEach((c) -> {
+//						customerRepository.save(c);
+//						});
+//		};
+//	}
 
 }

@@ -1,8 +1,6 @@
 package com.clientui.controller;
 
-import com.clientui.beans.FlightBean;
 import com.clientui.beans.RiverCruiseBean;
-import com.clientui.proxies.MicroServiceFlightProxies;
 import com.clientui.proxies.MicroServiceRiverCruiseProxies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

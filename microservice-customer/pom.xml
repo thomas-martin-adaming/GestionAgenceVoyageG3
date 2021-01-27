@@ -9,7 +9,7 @@
 		<version>2.3.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.mvol</groupId>
+	<groupId>com.mcustomer</groupId>
 	<artifactId>microservice-customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservice-customer</name>
@@ -54,7 +54,34 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+
+		<!-- intégration mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--
+               intégration Sleuth zipkin
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+		 intégration Sleuth zipkin END-->
+
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>xwork</id>
+			<url>https://maven.atlassian.com/3rdparty/</url>
+		</repository>
+	</repositories>
 
 	<dependencyManagement>
 		<dependencies>
