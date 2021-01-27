@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.websocket.server.PathParam;
 
-@FeignClient(name = "microservice-journey", url = "localhost:9092/")
+@FeignClient(name = "microservice-journey-riverCruise", url = "localhost:9092/")
 public interface MicroServiceRiverCruiseProxies {
 
 	@GetMapping("/riverCruise")

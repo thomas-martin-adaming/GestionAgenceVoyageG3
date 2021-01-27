@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.clientui.beans.RoleBean;
 
-@FeignClient(name = "zuul-server", url = "localhost:9004/")
+@FeignClient(name = "zuul-server-role", url = "localhost:9004/")
 public interface MicroServiceRoleProxies {
 	
 	@GetMapping(value = "/roles")

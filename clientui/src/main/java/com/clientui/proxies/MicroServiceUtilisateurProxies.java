@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.clientui.beans.UtilisateurBean;
 
-@FeignClient(name = "zuul-server", url = "localhost:9004/")
+@FeignClient(name = "zuul-server-utilisateur", url = "localhost:9004/")
 public interface MicroServiceUtilisateurProxies {
 	
 	@GetMapping(value = "/users")
