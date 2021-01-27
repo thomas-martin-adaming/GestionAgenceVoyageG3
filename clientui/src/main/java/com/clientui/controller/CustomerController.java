@@ -22,22 +22,22 @@ public class CustomerController {
 	private MicroServiceCustomerProxies mscp;
 
 
-		@PostMapping(value = "/Customers")
+		@PostMapping(value = "/customers")
 		public void add(@RequestBody CustomerBean c) {
 			mscp.save(c);
 		}
 
-		@GetMapping(value = "/Customers")
+		@GetMapping(value = "/customers")
 		public List<CustomerBean> getAll() {
 			return mscp.findAll();
 		}
 
-		@GetMapping(value = "/Customers/{id}")
+		@GetMapping(value = "/customers/{id}")
 		public CustomerBean findById(@PathVariable long id) {
 			return mscp.findOne(id);
 		}
 
-		@DeleteMapping(value = "/Customers/{id}")
+		@DeleteMapping(value = "/customers/{id}")
 		public void delete(@PathVariable long id) {
 			mscp.delete(id);
 		}
