@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class FlightController {
 
@@ -19,8 +19,8 @@ public class FlightController {
 		return flightService.findAll();
 	}
 
-	@GetMapping("/flight/{idFlight}")
-	public Flight findOne(@PathParam("idFlight") Long id) {
+	@GetMapping("/flight/{idJourney}")
+	public Flight findOne(@PathVariable("idJourney") Long id) {
 		return flightService.findOne(id);
 	}
 
@@ -29,8 +29,8 @@ public class FlightController {
 		return flightService.save(flight);
 	}
 
-	@DeleteMapping("/flight/{idFlight}")
-	public void delete(@PathParam("idflight") Long id) {
-		flightService.delete(id);
+	@DeleteMapping("/flight/{idJourney}")
+	public void delete(@PathVariable("idJourney") Long idJourney) {
+		flightService.delete(idJourney);
 	}
 }

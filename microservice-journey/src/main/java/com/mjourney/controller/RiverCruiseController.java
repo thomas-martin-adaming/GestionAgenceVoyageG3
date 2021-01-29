@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class RiverCruiseController {
 	@Autowired
@@ -18,8 +18,8 @@ public class RiverCruiseController {
 		return riverCruiseService.findAll();
 	}
 
-	@GetMapping("/riverCruise/{idriverCruise}")
-	public RiverCruise findOne(@PathParam("idriverCruise") Long id) {
+	@GetMapping("/riverCruise/{idJourney}")
+	public RiverCruise findOne(@PathVariable("idJourney") Long id) {
 		return riverCruiseService.findOne(id);
 	}
 
@@ -28,8 +28,8 @@ public class RiverCruiseController {
 		return riverCruiseService.save(riverCruise);
 	}
 
-	@DeleteMapping("/riverCruise/{idRiverCruise}")
-	public void delete(@PathParam("idriverCruise") Long id) {
+	@DeleteMapping("/riverCruise/{idJourney}")
+	public void delete(@PathVariable("idJourney") Long id) {
 		riverCruiseService.delete(id);
 	}
 }

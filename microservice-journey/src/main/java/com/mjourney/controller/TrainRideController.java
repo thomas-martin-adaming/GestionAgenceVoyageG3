@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class TrainRideController {
 	@Autowired
@@ -18,8 +18,8 @@ public class TrainRideController {
 		return trainRideService.findAll();
 	}
 
-	@GetMapping("/trainRide/{idTrainRide}")
-	public TrainRide findOne(@PathParam("idTrainRide") Long id) {
+	@GetMapping("/trainRide/{idJourney}")
+	public TrainRide findOne(@PathVariable("idJourney") Long id) {
 		return trainRideService.findOne(id);
 	}
 
@@ -28,8 +28,8 @@ public class TrainRideController {
 		return trainRideService.save(trainRide);
 	}
 
-	@DeleteMapping("/trainRide/{idTrainRide}")
-	public void delete(@PathParam("idTrainRide") Long id) {
+	@DeleteMapping("/trainRide/{idJourney}")
+	public void delete(@PathVariable("idJourney") Long id) {
 		trainRideService.delete(id);
 	}
 }

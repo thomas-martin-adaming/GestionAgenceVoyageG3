@@ -4,11 +4,7 @@ import com.clientui.beans.FlightBean;
 import com.clientui.proxies.MicroServiceFlightProxies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.util.List;
@@ -25,8 +21,8 @@ public class FlightController {
         return flightProxies.findAll();
     }
 
-    @GetMapping("/flight/{idFlight}")
-    public FlightBean findOne(@PathParam("idFlight") Long id) {
+    @GetMapping("/flight/{idJourney}")
+    public FlightBean findOne(@PathVariable("idJourney") Long id) {
         return flightProxies.findOne(id);
     }
 
@@ -35,8 +31,8 @@ public class FlightController {
         return flightProxies.save(flight);
     }
 
-    @DeleteMapping("/flight/{idFlight}")
-    public void delete(@PathParam("idflight") Long id) {
-        flightProxies.delete(id);
+    @DeleteMapping("/flight/{idJourney}")
+    public void delete(@PathVariable("idJourney") Long idJourney) {
+        flightProxies.delete(idJourney);
     }
 }
